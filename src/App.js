@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import ToDoList from './ToDoList';
+import ToDoItem from './ToDoItem';
+import ToDoCounter from './ToDoCounter';
+
+import Container from '@mui/material/Container';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const items = [
+  { text: 'Tarea 1', completed: true },
+  { text: 'Tarea 2', completed: false },
+  { text: 'Tarea 3', completed: false }
+];
+
+const App = () =>
+  <>
+    <Container maxWidth="sm">
+      <ToDoCounter />
+      {/* <ToDoSearch />
+      <ToDoButton /> */}
+      <h3>Tareas</h3>
+      <ToDoList>
+        {items.map((item, index) => <ToDoItem text={item.text} completed={item.completed} key={index} />)}
+      </ToDoList>
+    </Container>
+  </>
 
 export default App;
