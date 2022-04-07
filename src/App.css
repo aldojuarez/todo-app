@@ -113,9 +113,24 @@ input {
 }
 
 li.finished{
-  color: green;
+  
   text-decoration: line-through;
 }
+
+
+.Icon-delete {
+  color: red;
+  position: absolute;
+  top: -1px;
+  right: 0;
+}
+
+.Icon-check {  
+  color: green;
+  position: absolute;
+  left: 12px;
+}
+
 
 /* .App {
   text-align: center;

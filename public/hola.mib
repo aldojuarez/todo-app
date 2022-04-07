@@ -1,0 +1,7 @@
+sysUpTime OBJECT-TYPE
+    SYNTAX  TimeTicks
+    ACCESS  read-only
+    STATUS  mandatory
+    DESCRIPTION
+            "The time "
+    ::= (system 3)

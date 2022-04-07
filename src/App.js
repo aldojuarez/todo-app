@@ -15,13 +15,10 @@ const App = () =>
   <>
     <Container maxWidth="sm">
       <ToDoCounter />
-      {/* <ToDoSearch />
-      <ToDoButton /> */}
       <h3>Tareas</h3>
       <ToDoList>
         {items.map((item, index) => <ToDoItem text={item.text} completed={item.completed} key={index} />)}
       </ToDoList>
     </Container>
   </>
-
 export default App;
